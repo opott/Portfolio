@@ -13,7 +13,7 @@ pull_request_rules:
     actions:
       update:
   - name: Ping PR author when conflicting
-    description: Warn the pull request author when their PR are conflicting
+    description: Warn the pull request author when their PRs are conflicting
     conditions:
       - conflict
       - -closed
