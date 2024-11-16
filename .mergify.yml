@@ -1,0 +1,54 @@
+queue_rules:
+  - batch_size: 10
+    batch_max_wait_time: 2 m
+    merge_method: rebase
+    update_method: merge
+    name: Main Queue
+pull_request_rules:
+  - name: Make sure PR are up to date before merging
+    description: This automatically updates PRs when they are out-of-date with the
+      base branch to avoid semantic conflicts (next step is using a merge
+      queue).
+    conditions: []
+    actions:
+      update:
+  - name: Ping PR author when conflicting
+    description: Warn the pull request author when their PR are conflicting
+    conditions:
+      - conflict
+      - -closed
+    actions:
+      comment:
+        message: >
+          ‼️ Hey {{author}}! Your PR is conflicting and needs to be updated to be
+          merged.
+  - name: Label conflicting pull requests
+    description: Add a label to a pull request with conflict to spot it easily
+    conditions:
+      - conflict
+      - -closed
+    actions:
+      label:
+        toggle:
+          - conflict
+  - name: Add a queue label when PR is queued
+    description: Toggle the queue label when a pull request is (un)queued.
+    conditions:
+      - queue-position > 0
+    actions:
+      label:
+        toggle:
+          - merge-queued
+  - name: Notify when a PR is removed from the queue
+    description: Notify the PR author when its pull request is removed from the merge queue.
+    conditions:
+      - queue-dequeue-reason != none
+      - queue-dequeue-reason != pr-merged
+    actions:
+      comment:
+        message: >
+          ‼️ Hey @{{author}}! Your pull request has been dequeued due to the
+          following reason: {{queue_dequeue_reason}}.
+
+          When you've fixed the issue, comment `@mergifyio
+          requeue` to requeue your pull request!
