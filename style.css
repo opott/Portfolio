@@ -21,7 +21,7 @@ header {
   padding: 1.25rem;
   width: auto;
   text-align: left;
-  line-height: 0.5;
+  line-height: 0.8;
 }
 
 header h1 a {
@@ -106,7 +106,7 @@ footer {
   line-height: 0.85;
 }
 .hero h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
   color: #ffffff;
 }
