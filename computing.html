@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Computing | Oliver Potter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="loading-overlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <dyn-header></dyn-header>
+
+    <div
+      class="hero"
+      style="
+        height: 35vh;
+        background: url(img/PXL_20240909_183711147.jpg) no-repeat center center;
+        background-size: cover;
+        position: relative;
+      "
+    >
+      <div class="hero-content">
+        <h1>Computing</h1>
+      </div>
+    </div>
+    <div class="page-content">
+      <p>
+        Computing is one of my greatest passions. I'm constantly learning,
+        building, and experimenting with technology to expand my skills and
+        explore new possibilities. Here's a look at some of my main interests:
+      </p>
+      <h1>Python</h1>
+      <p>
+        Python is my go to programming language. Its simplicity and versatility
+        make it perfect for everything from automating tasks to creating
+        powerful tools.
+      </p>
+      <h1>Web Development</h1>
+      <p>
+        I love using HTML to build websites and create the foundation for web
+        projects. Paired with CSS and JavaScript, I enjoy designing functional
+        and visually appealing web pages, including this website!
+      </p>
+      <h1>Cybersecurity</h1>
+      <p>
+        I am particularly interested in pursuing a career in cybersecurity, and
+        want to learn more about the industry. It is of critical importance in
+        the modern world, and I would love to be a part of protecting our
+        digital world.
+      </p>
+      <h1>Raspberry Pi</h1>
+      <p>
+        The Raspberry Pi is a perfect combination of hardware and software for
+        me. I enjoy experimenting with Linux and Docker, and hope to create a
+        home server one day.
+      </p>
+      <h1>VoIP</h1>
+      <p>
+        VoIP is another area of computing that I'm interested in. I've explored
+        how internet-based phone systems work and how to set them up using
+        FreePBX on a Raspberry Pi.
+      </p>
+      <h1>Why Computing Excites Me</h1>
+      <p>
+        Computing allows me to combine creativity and problem-soliving in ways
+        that are both practical and fun. Every project teaches me something new,
+        and I enjoy this.
+      </p>
+    </div>
+
+    <dyn-footer></dyn-footer>
+
+    <script src="/scripts/headerfooter.js" defer></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.querySelector(".loading-overlay").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
