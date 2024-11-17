@@ -10,13 +10,13 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/0img_0001.jpg" alt="project-screenshot" width="400" height="400/">
+<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/0img_0001.jpg" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/1img_0002.jpg" alt="project-screenshot" width="400" height="400/">
+<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/1img_0002.jpg" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/2img_0003.jpg" alt="project-screenshot" width="400" height="400/">
+<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/2img_0003.jpg" alt="project-screenshot" width="700" height="400/">
 
-<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/3img_0004.jpg" alt="project-screenshot" width="400" height="400/">
+<img src="https://cloud-1awivio4f-hack-club-bot.vercel.app/3img_0004.jpg" alt="project-screenshot" width="700" height="400/">
 
   
   
