@@ -20,8 +20,8 @@ pull_request_rules:
     actions:
       comment:
         message: >
-          ‼️ Hey {{author}}! Your PR is conflicting and needs to be updated to be
-          merged.
+          ‼️ Hey {{author}}! Your PR is conflicting and needs to be updated to
+          be merged.
   - name: Label conflicting pull requests
     description: Add a label to a pull request with conflict to spot it easily
     conditions:
@@ -31,24 +31,3 @@ pull_request_rules:
       label:
         toggle:
           - conflict
-  - name: Add a queue label when PR is queued
-    description: Toggle the queue label when a pull request is (un)queued.
-    conditions:
-      - queue-position > 0
-    actions:
-      label:
-        toggle:
-          - merge-queued
-  - name: Notify when a PR is removed from the queue
-    description: Notify the PR author when its pull request is removed from the merge queue.
-    conditions:
-      - queue-dequeue-reason != none
-      - queue-dequeue-reason != pr-merged
-    actions:
-      comment:
-        message: >
-          ‼️ Hey @{{author}}! Your pull request has been dequeued due to the
-          following reason: {{queue_dequeue_reason}}.
-
-          When you've fixed the issue, comment `@mergifyio
-          requeue` to requeue your pull request!
